@@ -1,13 +1,19 @@
 body{
     background-color: #0F0D13;
+    gap: 20%
 }
 
 body * {
     font-family: 'Roboto', sans-serif;
 }
 
-#app *{
-    /* border: 1px solid red; */
+.cabecalho{
+    width: 160px;
+    border: 1px solid #C4C4CC;
+    height: 50vh;
+    background-color: #500274;
+    opacity: .6;
+    border-radius: 10px;
 }
 
 #app{
@@ -35,6 +41,7 @@ body * {
     width: 190px;
     height: 190px;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 #player-1 .info{
@@ -43,6 +50,7 @@ body * {
 
 #player-2{
     grid-area: B;
+    height: fit-content;
 }
 
 #player-3{
@@ -50,18 +58,34 @@ body * {
 }
 
 .player{
-    background-color: #2A2141;
+    background-color: #500274;
+    opacity: .5;
     padding: 28px;
+    border-radius: 10px;
+    outline: 1px solid #E1E1E6;
+}
+
+.player img{
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 6px;
+    outline: 1px solid #E1E1E6;
+}
+
+.info-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
 .info{
     color: #E1E1E6;
-    display: grid;
-    gap: 9.6px;
 }
 
 .info h1{
     font-size: 24px;
+    margin-bottom: 9.6px;
 }
 
 .info p{
@@ -75,7 +99,12 @@ body * {
     margin-top: 28px;
 }
 
+.horizontal .controls {
+    padding-inline: 58px;
+}
+
 .track{
+    margin-top: 28px;
     position: relative;
 }
 
@@ -88,6 +117,7 @@ body * {
     opacity: .3;
     border-radius: 10px;
     position: absolute;
+    z-index: 2;
 }
 
 .track::after{
